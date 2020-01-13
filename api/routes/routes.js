@@ -1,6 +1,5 @@
 'use strict';
 module.exports = routes;
-
 function routes(app) {
   app.all('/',
     function (req, res) {
@@ -18,6 +17,7 @@ function routes(app) {
 
   app.all('/info', require('./info.js'));
 
+  
   app.use(
     function (req, res) {
       res.status(404);
